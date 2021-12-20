@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head> 
+	<title>The Great Honey Company</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/plato-assets.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	<link rel="stylesheet" href="./css/ordernow.css">
+</head>
+<body>
+	<!-- Container -->
+	<div id="container">
+			<header class="clearfix trans">
+				<nav class="navbar navbar-default navbar-static-top" role="navigation">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button> 
+							<a class="navbar-brand" href="index.html"><img width="240px" src="images/TGHC 2.png" class="img-responsive" alt=""></a>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right navigate-section">
+								<li><a href="index.html">Home</a></li>
+								<li><a href="index.html">About</a></li>
+								<li><a href="index.html">Product</a></li>
+								<li><a href="index.html">Contact</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a class="active" href="ordernow.html">Order Now</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			
+			<center><h1 id="ord">Order Now</h1></center>
+            <!-- form to get data and orders  -->
+            <form class="order-form container" method="post" name="google-sheet">
+				<div class="row">
+				<div class="col-lg-6">
+				<ul>
+					<li>				
+						<label for="name">Name :</label>
+						<input required type="name" name="name" id="name"></li>
+					<li>
+						<label for="phone">Phone :</label>
+						<input required type="tel" name="phone" id="phone">
+					</li>
+					<li> 
+						<label for="email">E-mail Id :</label>
+						<input type="email" name="email" id="email">
+					</li>
+					<center>
+						<div class="multi-selector">
+							<div class="select-field">
+							   <p class="input-selector">Choose Products<span class="down-arrow">&blacktriangledown;</span></p>
+						   </div>
+							<div class="list"> 
+								<label for="task0" class="task">
+									<input type="checkbox" value="t0" name="" id="task0">
+									Beehive 
+									<span> Rs.7500/- </span> 
+							 </label>
+							 <label for="task1" class="task">
+								   <input type="checkbox" value="t1" name="" id="task1">
+								   Tulsi
+								   <span>300 grams</span>
+							</label>
+							  <label for="task2" class="task">
+								   <input type="checkbox" value="t2" name="" id="task2">
+								   Eucalyptus
+								   <span>300 grams</span>
+							</label>
+							  <label for="task3" class="task">
+								   <input type="checkbox" value="t3" name="" id="task3">
+								   Coriander
+								   <span>300 grams</span>
+							</label>
+							  <label for="task4" class="task">
+								   <input type="checkbox" value="t4" name="" id="task4">
+								   Mustard
+								   <span>300 grams</span>
+							</label>
+							<label for="task5" class="task">
+							   <input type="checkbox" value="t5" name="" id="task5">
+								   Litchi
+							   <span>300 grams</span>
+						   </label>
+						   <label for="task6" class="task">
+							   <input type="checkbox" value="t6" name="" id="task6">
+							   Jamun 
+						   <span>300 grams</span>
+						   </label>
+						   <label for="task7" class="task">
+							   <input type="checkbox" value="t7" name="" id="task7">
+							   Carom 
+						   <span>300 grams</span>
+						   </label>
+							</div>
+						   </div>
+						</center>
+					<li class="quantity t0">
+						<label for='bhive'>Beehive : </label>&nbsp;&nbsp;
+						<button type="button" onclick="minus31()" class="minus-btn" >- </button>&nbsp;
+						<input type="number" class="increment-val" name="bhive" value="0" id="bhive"> &nbsp;
+						<button type="button" onclick="plus31()" class="plus-btn" >  +</button>
+					</li> 
+					<li class="quantity t1"> 
+						<label for='tulsi'>Tulsi - 300 gms : </label>&nbsp;
+						<button type="button" onclick="minus3()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="tulsi" value="0" id="tulsi">
+						<button type="button" onclick="plus3()" class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t2"> 
+						<label for='eucalyptus'>Eucalyptus - 300 gms </label>&nbsp;
+						<button type="button" onclick="minus6()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="eucalyptus" value="0" id="eucalyptus">
+						<button type="button" onclick="plus6()" class="plus-btn" >+</button>
+					</li> 
+					<li class="quantity t3">
+						<label for='coriander'>Coriander - 300 gms : </label>&nbsp;
+						<button type="button" onclick="minus5()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="coriander" value="0" id="coriander">
+						<button type="button" onclick="plus5()" class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t4">
+						<label for='mustard'>Mustard - 300 gms : </label>&nbsp;
+						<button type="button" onclick="minus4()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="mustard" value="0" id="mustard">
+						<button type="button" onclick="plus4()" class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t5">
+						<label for='litchi'>Litchi - 300 gms : </label>&nbsp;
+						<button type="button" onclick="minus2()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="litchi" value="0" id="litchi">
+						<button type="button" onclick="plus2()" class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t6">
+						<label for='jamun'>Jamun - 300 gms : </label>&nbsp;
+						<button type="button" onclick="minus1()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="jamun" value="0" id="jamun">
+						<button type="button" onclick="plus1()" class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t7"> 
+						<label for='carom'>Carom - 300 gms :</label> &nbsp;
+						<button type="button" onclick="minus()" class="minus-btn" >-</button>
+						<input type="number" class="increment-val" name="carom" value="0" id="carom">
+						<button type="button" onclick="plus()"  class="plus-btn" >+</button>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-6">
+				<ul>
+					<li>
+						<label for="address">House No. and Street :</label>
+						<input required type="address" name="address-line-1" id="address-line-1">
+					</li>
+					<li>
+						<label for="address">Area and City :</label>
+						<input required type="address" name="address-line-2" id="address-line-2">
+					</li>
+					<li>
+						<label for="address">State :</label>
+						<input required type="address" name="address-line-3" id="address-line-3">
+					</li>
+					<li>
+						<label for="pincode">Pincode :</label>
+						<input required type="number" name="pincode" id="pincode">
+					</li>
+				</ul>
+			</div>
+		</div>
+		<input type="submit" id="submit-form-inp" class="btn btn-warning" name="submit" value="Place Order"></input>
+            </form>
+			<section id="dnon">
+				<center>
+					<p>Your order has been succesfully placed, click <a href="https://thegreathoneyco.com/">here</a> to continue.</p>
+				</center>
+			</section>
+            <!-- end of the form  -->
+		<!-- footer 
+			================================================== -->
+		<footer>
+			<p class="copyright">
+				&copy; Copyright 2021. "The Great Honey Company". All rights reserved.
+			</p>
+		</footer>
+		<!-- End footer -->
+
+	</div>
+	<!-- End Container -->
+	<script type="text/javascript">
+
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ_lxLr5m4c_xpOtxRBU8LS3a1tN-u8jsCk7Q42Pj8GKC-f0ZqPO9Ld4YtKizREQn_/exec'
+			  const form = document.forms['google-sheet']
+			  const dnon = document.getElementById('dnon')
+			  form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				  .then(response => alert("Your order is placed succesfully."))
+				  .catch(error => console.error('Error!', error.message))
+				  form.style.display = 'none'
+				  dnon.style.display = 'block'
+			  })
+			  
+	</script>
+	<!-- JavaScript Bundle with Popper --> 
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="js/plato-plugins.min.js"></script> 
+	<script>
+		document.querySelector('.select-field').addEventListener('click',()=>{
+		document.querySelector('.list').classList.toggle('show'); 
+		document.querySelector('.down-arrow').classList.toggle('rotate180');
+		});
+	</script> 
+	<script src="./js/ordernow.js"></script>
+	<script src="js/script.js"></script>	
+</body>
+</html>
