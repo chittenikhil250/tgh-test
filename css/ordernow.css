@@ -158,7 +158,7 @@ p{
     -o-user-select: none;
     user-select: none;
 }
-.t0, .t1, .t2, .t3, .t4, .t5, .t6, .t7 {
+.t0, .t1, .t2, .t3, .t4, .t5, .t6, .t7, .t8, .t9, .t10 {
     display: none;
 }
 @media (min-width:900px) {

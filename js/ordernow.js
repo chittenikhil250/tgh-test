@@ -89,3 +89,39 @@ function minus3(){
         m.value --;
     }
 }
+function minuscfs(){
+    const thing = document.getElementById('cfs').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}
+function minuswax(){
+    const thing = document.getElementById('bwax').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}
+function minus31(){
+    const thing = document.getElementById('bhive').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}
+function plus31(){
+    const thing = document.getElementById('bhive').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+}
+function pluswax(){
+    const thing = document.getElementById('bwax').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+}
+function pluscfs(){
+    const thing = document.getElementById('cfs').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+}
