@@ -26,7 +26,7 @@ fetch(url)
                         </center>
 						<p>${arr[i].content}</p> 
 						<ul class="share-post">
-							<li><a class="like"><i class="fa fa-heart"></i></a></li>
+							<li><button onclick="like()" id="like" class="like"><i class="fa fa-heart"></i></button></li>
 							<li><a class="comment" href="${arr[i].url+'#comments'}" target="_blank"><i class="fa fa-comment"></i></a></li>	
 							<li><a class="share" id="${'share '+i}" data-clipboard-text="${arr[i].url}"><i class="fa fa-share"><input type="button" style="display : none; cursor : pointer;" id="copy" data-clipboard-target="#txt_copy" >
 							</i></a></li>
@@ -34,6 +34,7 @@ fetch(url)
 		</div>
         `
         document.getElementById('root').innerHTML += data;
+		
     }
 })
 .catch(err => console.warn(err))
