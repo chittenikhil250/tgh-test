@@ -32,13 +32,13 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right navigate-section">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="index.html">About</a></li>
-								<li><a href="index.html">Product</a></li>
-								<li><a href="index.html">Contact</a></li>
+								<li><a href="index.html#about-section">About</a></li>
+								<li><a href="index.html#special-section">Product</a></li>
+								<li><a href="index.html#contact-section">Contact</a></li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a class="active" href="ordernow.html">Order Now</a></li>
 							</ul>
-						</div>
+						</div> 
 					</div>
 				</nav>
 			</header>
@@ -60,17 +60,16 @@
 						<label for="email">E-mail Id :</label>
 						<input type="email" name="email" id="email">
 					</li>
+					<li>
+						<label for="promocode">Promo Code (optional) : </label>
+						<input type="text" name="promocode" id="promocode">
+					</li>
 					<center>
 						<div class="multi-selector">
 							<div class="select-field">
 							   <p class="input-selector">Choose Products<span class="down-arrow">&blacktriangledown;</span></p>
 						   </div>
 							<div class="list"> 
-								<label for="task0" class="task">
-									<input type="checkbox" value="t0" name="" id="task0">
-									Beehive 
-									<span> Rs.7500/- </span> 
-							 </label>
 							 <label for="task1" class="task">
 								   <input type="checkbox" value="t1" name="" id="task1">
 								   Tulsi
@@ -105,31 +104,11 @@
 							   <input type="checkbox" value="t7" name="" id="task7">
 							   Carom 
 						   <span>300 grams</span>
-						   </label>
-						   <label for="task8" class="task">
-							<input type="checkbox" value="t8" name="" id="task8">
-							C.F Sheets 
-						<span>1kg</span>
-						</label>
-						<label for="task9" class="task">
-							<input type="checkbox" value="t9" name="" id="task9">
-							Bees Wax 
-						<span>1kg</span> 
-						</label> 
-						<label for="task10" class="task">
-							<input type="checkbox" value="t10" name="" id="task10">
-							Bee Pollen 
-						<span></span> 
-						</label> 
+						   </label> 
 							</div>
 						   </div>
 						</center>
-					<li class="quantity t0">
-						<label for='bhive'>Beehive : </label>&nbsp;
-						<button type="button" onclick="minus31()" class="minus-btn" >- </button>
-						<input type="number" class="increment-val" name="bhive" value="0" id="bhive">
-						<button type="button" onclick="plus31()" class="plus-btn" >  +</button>
-					</li> 
+			
 					<li class="quantity t1"> 
 						<label for='tulsi'>Tulsi - 300 gms : </label>&nbsp;
 						<button type="button" onclick="minus3()" class="minus-btn" >-</button>
@@ -172,22 +151,7 @@
 						<input type="number" class="increment-val" name="carom" value="0" id="carom">
 						<button type="button" onclick="plus()"  class="plus-btn" >+</button>
 					</li>
-					<li class="quantity t8"> 
-						<label for='cfs'>C.F Sheets - 1kg (12 - 13 sheets)  : </label>  
-						<button type="button" onclick="minuscfs()" class="minus-btn" >-</button> 
-						<input type="number" class="increment-val" name="cfs" value="0" id="cfs">
-						<button type="button" onclick="pluscfs()"  class="plus-btn" >+</button>
-					</li>
-					<li class="quantity t9"> 
-						<label for='bwax'>Bee Wax - 1kg  : </label> 
-						<button type="button" onclick="minuswax()" class="minus-btn" >-</button> 
-						<input type="number" class="increment-val" name="bwax" value="0" id="bwax">
-						<button type="button" onclick="pluswax()"  class="plus-btn" >+</button>
-					</li>
-					<li class="quantity t10"> 
-						<label for='bpollen'> Bee Pollen   : (Write grams required) </label> 
-						<input type="number" class="" name="bpollen"  value="0" id="bpollen"> 
-					</li>
+				
 				</ul> 
 			</div>
 			<div class="col-lg-6">
@@ -215,13 +179,13 @@
             </form>
 			<section id="dnon">
 				<center>
-					<p>Your order has been succesfully placed, click <a href="https://thegreathoneyco.com/">here</a> to continue.</p>
+					<p>Your order has been succesfully placed, click <a href="index.html">here</a> to continue.</p>
 				</center>
 			</section>
             <!-- end of the form  -->
 		<!-- footer 
 			================================================== -->
-		<footer>
+		<footer id="footer">
 			<p class="copyright">
 				&copy; Copyright 2021. "The Great Honey Company". All rights reserved.
 			</p>
@@ -242,6 +206,7 @@
 				  .catch(error => console.error('Error!', error.message))
 				  form.style.display = 'none'
 				  dnon.style.display = 'block'
+				  window.scrollTo(0,0);
 			  })
 			  
 	</script>
