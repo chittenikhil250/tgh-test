@@ -10,8 +10,42 @@ function plus(){
     const m = thing.children[2]
     m.value ++;
 } 
+function plus9f(){
+    const thing = document.getElementById('bhive9').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+} 
+function plus5f(){
+    const thing = document.getElementById('bhive5').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+} 
+function pluscf(){
+    const thing = document.getElementById('cfs').parentElement;
+    const m = thing.children[2]
+    m.value ++;
+} 
 function minus(){
     const thing = document.getElementById('carom').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}
+function minus5f(){
+    const thing = document.getElementById('bhive5').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}function minus9f(){
+    const thing = document.getElementById('bhive9').parentElement;
+    const m = thing.children[2];
+    if (m.value > 0){
+        m.value --;
+    }
+}function minuscf(){
+    const thing = document.getElementById('cfs').parentElement;
     const m = thing.children[2];
     if (m.value > 0){
         m.value --;

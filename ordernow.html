@@ -33,7 +33,7 @@
 							<ul class="nav navbar-nav navbar-right navigate-section">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="index.html#about-section">About</a></li>
-								<li><a href="index.html#special-section">Product</a></li>
+								<li><a href="index.html#special-section">Products</a></li>
 								<li><a href="index.html#contact-section">Contact</a></li>
 								<li><a href="blog.html">Blog</a></li>
 								<li><a class="active" href="ordernow.html">Order Now</a></li>
@@ -67,7 +67,7 @@
 					<center>
 						<div class="multi-selector">
 							<div class="select-field">
-							   <p class="input-selector">Choose Products<span class="down-arrow">&blacktriangledown;</span></p>
+							   <p class="input-selector">Honey Products<span class="down-arrow">&blacktriangledown;</span></p>
 						   </div>
 							<div class="list"> 
 							 <label for="task1" class="task">
@@ -105,6 +105,46 @@
 							   Carom 
 						   <span>300 grams</span>
 						   </label> 
+							</div>
+						   </div>
+						    
+						 
+
+						   <div class="multi-selector">
+							<div class="select-field2">
+							   <p class="input-selector">Bee Products<span class="down-arrow2">&blacktriangledown;</span></p>
+						   </div>
+							<div class="list2"> 
+							 <label for="task8" class="task">
+								   <input type="checkbox" value="t8" name="" id="task8">
+								   Bee Wax 
+								   <span>1000 grams</span>
+							</label>
+							  <label for="task9" class="task">
+								   <input type="checkbox" value="t9" name="" id="task9">
+								   C.F Sheets
+								   <span>12 - 14 Sheets</span>
+							</label>
+							  <label for="task10" class="task"> 
+								   <input type="checkbox" value="t10" name="" id="task10">
+								   Bees 
+								   <span>apis mellifera	</span>
+							</label>
+							  <label for="task11" class="task">
+								   <input type="checkbox" value="t11" name="" id="task11">
+								   Bee Pollen 
+								   <span>150 grams</span>
+							</label> 
+							<label for="task12" class="task">
+							   <input type="checkbox" value="t12" name="" id="task12">
+								   Bee Hive 
+							   <span>5 Frames</span>
+						   </label>
+						   <label for="task13" class="task">
+							   <input type="checkbox" value="t13" name="" id="task13">
+							   Bee Hive  
+						   <span>9 Frames</span>
+						   </label>
 							</div>
 						   </div>
 						</center>
@@ -151,6 +191,36 @@
 						<input type="number" class="increment-val" name="carom" value="0" id="carom">
 						<button type="button" onclick="plus()"  class="plus-btn" >+</button>
 					</li>
+					<li class="quantity t8"> 
+						<label for='beeswax'> Bees Wax (grams) : </label> 
+						<input type="number" class="pollen" name="beeswax" value="0" id="beeswax">
+					</li>
+					<li class="quantity t11"> 
+						<label for='carom'> Bee Pollen ( grams ) : </label> 
+						<input type="number" class="pollen" name="pollen" value="0" id="pollen">	
+					</li>
+					<li class="quantity t10"> 
+						<label for='bees'> Bees : </label> 
+						<input type="number" class="pollen" name="bees" value="0" id="bees">
+					</li> 
+					<li class="quantity t9"> 
+						<label for='cfs'> C.F Sheets (kgs) : </label> 
+						<button type="button" onclick="minuscf()" class="minus-btn" >-</button> 
+						<input type="number" class="increment-val" name="cfs" value="0" id="cfs">
+						<button type="button" onclick="pluscf()"  class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t12"> 
+						<label for='bhive5'> Bee Hive (5 frames) : </label> 
+						<button type="button" onclick="minus5f()" class="minus-btn" >-</button> 
+						<input type="number" class="increment-val" name="bhive5" value="0" id="bhive5">
+						<button type="button" onclick="plus5f()"  class="plus-btn" >+</button>
+					</li>
+					<li class="quantity t13"> 
+						<label for='bhive9'> Bee Hive (9 frames) : </label> 
+						<button type="button" onclick="minus9f()" class="minus-btn" >-</button> 
+						<input type="number" class="increment-val" name="bhive9" value="0" id="bhive9">
+						<button type="button" onclick="plus9f()"  class="plus-btn" >+</button>
+					</li> 
 				
 				</ul> 
 			</div>
@@ -217,6 +287,11 @@
 		document.querySelector('.select-field').addEventListener('click',()=>{
 		document.querySelector('.list').classList.toggle('show'); 
 		document.querySelector('.down-arrow').classList.toggle('rotate180');
+		});
+
+		document.querySelector('.select-field2').addEventListener('click',()=>{
+		document.querySelector('.list2').classList.toggle('show'); 
+		document.querySelector('.down-arrow2').classList.toggle('rotate180');
 		});
 	</script> 
 	<script src="./js/ordernow.js"></script> 

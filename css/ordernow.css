@@ -12,6 +12,10 @@
     width: 2.5vw;
     text-align: center;
 }
+.pollen{
+    width: 3.5vw !important;
+    text-align: center;
+}
 .minus-btn, .plus-btn{
     width: 26px;
     height: 31px;
@@ -86,21 +90,9 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .multi-selector{
-    width: max-content;
+    width: 160px;
+    margin-bottom: 10px;
     cursor: pointer;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -109,7 +101,7 @@ body{
     -o-user-select: none;
     user-select: none;
 }
-.select-field{
+.select-field, .select-field2{
     border: 1px solid rgb(187, 187, 187);
 }
 .select-field,.task,.list{
@@ -117,7 +109,7 @@ body{
     background-color: white;
     padding: 0.3rem;
 }
-.list{
+.list, .list2{
     box-shadow: 0 30px 60px rgb(0,0,0,0.2);
     display: none;
 }
@@ -126,7 +118,7 @@ p{
     color: #444;
     font-weight: 400;
 }
-.down-arrow{
+.down-arrow, .down-arrow2{
     font-size: 1.2rem;
     display: inline-block;
     cursor: pointer;
@@ -158,7 +150,7 @@ p{
     -o-user-select: none;
     user-select: none;
 }
-.t1, .t2, .t3, .t4, .t5, .t6, .t7{
+.t1, .t2, .t3, .t4, .t5, .t6, .t7, .t8, .t9, .t10, .t11, .t12, .t13{
     display: none;
 }
 @media (min-width:900px) {
