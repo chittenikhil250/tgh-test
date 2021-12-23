@@ -1678,3 +1678,19 @@ footer p.copyright {
 .comment-input{
   outline: none !important;
 }
+.product-desc{
+  color: #999999;
+  text-align: justify !important;
+  /* font-size: small; */
+  font-weight: 100 !important;
+  margin-bottom: 0 !important;
+}
+.food-content-box :hover{
+  color: white !important;
+}
+.food-content{
+  padding-bottom: 0 !important;
+}
+.cfsh2{
+  margin-bottom: 0 0 10px;
+}
