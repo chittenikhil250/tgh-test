@@ -572,11 +572,13 @@ Thanks
 										Say Hello!
 									</h1>
 
-									<form method="post" action="contact.php" id="contact-form">
+									<form method="POST" action="https://formsubmit.co/thegreathoneyco@gmail.com" id="contact-form">
 										<input name="name" id="name" required type="text" type="name" placeholder="Name*">
 										<input name="mail" id="mail" required type="text" type="email" placeholder="Email*">
 										<textarea name="comment" required id="comment" placeholder="*Message*"></textarea>
-										<input type="submit" id="submit_contact" value="Send Message">
+										<input type="hidden" name="_captcha" value="false">
+										<input type="hidden" name="_next" value="https://thegreathoneyco.com/index.html#contact-section"> 
+										<button class="btn btn-warning" type="submit">Send Message</button>
 									</form> 
 								</div>
 							</div>
