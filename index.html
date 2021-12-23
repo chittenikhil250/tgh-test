@@ -572,15 +572,18 @@ Thanks
 										Say Hello!
 									</h1>
 
-									<form method="post" action="contact.php" id="contact-form">
+									<!-- <form method="post" action="contact.php" id="contact-form">
 										<input name="name" id="name" required type="text" type="name" placeholder="Name*">
 										<input name="mail" id="mail" required type="text" type="email" placeholder="Email*">
 										<textarea name="comment" required id="comment" placeholder="*Message*"></textarea>
 										<input type="submit" id="submit_contact" value="Send Message">
-										<!-- <div class="submit-area"> 
-											<div id="msg" class="message"></div>								
-										</div> -->
-									</form> 
+									</form>  -->
+									<form action="mail.php" method="post">
+										<input type="name" name="name" placeholder="Name*" required id="name">
+										<input type="email" name="email" id="email" required placeholder="Email*">
+										<input type="textarea" name="message" id="message" placeholder="Message*">
+										<input type="submit" name="submit" id="submit_contact" value="Send Message">
+									</form>
 								</div>
 							</div>
 							<div class="col-md-4">

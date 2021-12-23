@@ -41,7 +41,7 @@
 		} else if($mail == '' or check_email($mail) == false){
 			echo json_encode(array('info' => 'error', 'msg' => "Please enter valid e-mail."));
 			exit();
-		} else if($comment == ''){
+		} else if($comment == ''){	
 			echo json_encode(array('info' => 'error', 'msg' => "Please enter your message."));
 			exit();
 		} else {
