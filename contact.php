@@ -1,7 +1,7 @@
 <?php 
 	#Your e-mail address
-	define("__TO__", "chnikhil250@gmail.com");
-	// define("__TO__", "info@tghc.in");
+	// define("__TO__", "chnikhil250@gmail.com");
+	define("__TO__", "info@tghc.in");
 	#Message subject
 	define("__SUBJECT__", "tghc.in = From:");
 	#Success message
@@ -13,7 +13,7 @@
 	//Send mail function
 	function send_mail($to,$subject,$message,$headers){
 		if(mail($to,$subject,$message,$headers)){
-			echo json_encode(array('info' => 'success', 'msg' => __SUCCESS_MESSAGE__));
+			echo json_encode(array('info' => 'success', 'msg' => __SUCCESS_MESSAGE__)); 
 		} else {
 			echo json_encode(array('info' => 'error', 'msg' => __ERROR_MESSAGE__));
 		}
@@ -32,7 +32,6 @@
 	if(isset($_POST['name']) and isset($_POST['mail']) and isset($_POST['comment'])){
 		$name 	 = $_POST['name'];
 		$mail 	 = $_POST['mail'];
-		$website  = $_POST['website'];
 		$comment = $_POST['comment'];
 
 		if($name == '') {
@@ -64,10 +63,6 @@
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $mail .'</td>
 				</tr>
 				<tr style="height: 32px;">
-				  <th align="right" style="width:150px; padding-right:5px;">Website:</th>
-				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $website .'</td>
-				</tr>
-				<tr style="height: 32px;">
 				  <th align="right" style="width:150px; padding-right:5px;">Comment:</th>
 				  <td align="left" style="padding-left:5px; line-height: 20px;">'. $comment .'</td>
 				</tr>
@@ -76,7 +71,7 @@
 			</html>
 			';
 
-			$headers  = 'MIME-Version: 1.0' . "\r\n";
+			$headers  = 'thegreathoneyco.com' . "\r\n";
 			$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 			$headers .= 'From: ' . $mail . "\r\n";
 			$headers .= 'CC:'.$mail."\r\n";
