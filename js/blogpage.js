@@ -1,6 +1,52 @@
 const api_key = 'AIzaSyDA2EpnBDQcNehCydte_UqPLhZO0bGC9lk'
 const apilink = '?key='+api_key
 const url = 'https://www.googleapis.com/blogger/v3/blogs/6246307111365338254/posts?key=AIzaSyDA2EpnBDQcNehCydte_UqPLhZO0bGC9lk';
+
+
+async function getBlogData(){
+	const fetchedData = await fetch(url).then( res => { return res.json() }).catch(err => console.warn(err));
+	var blogPosts = fetchedData.items;
+	var l = blogPosts.length;
+	var i = 0;
+	// console.log(blogPosts);
+	for(i; i<l; i++){
+		var blogPostData = `
+		<div class="blog-post">
+						<center>
+                        <h1 class="title"><a target="_blank" href="${blogPosts[i].url}">${blogPosts[i].title}</a></h1>
+						<ul class="post-meta">
+							<li>
+								<a href="#">${blogPosts[i].published.substr(0,10)}</a>
+							</li>
+							<li>
+								<a href="#">Honey</a>
+							</li>
+							<li>
+								<a id="comments-anchor" target="_blank" href="${blogPosts[i].url+'#comments'}">${blogPosts[i].replies.totalItems} comments</a>
+							</li>
+						</ul>
+                        </center>
+						<p>${blogPosts[i].content}</p> 
+						<ul class="share-post">
+							<li><button onclick="like()" id="like" class="like"><i class="fa fa-heart"></i></button></li>
+							<li><a class="comment" href="${blogPosts[i].url+'#comments'}" target="_blank"><i class="fa fa-comment"></i></a></li>	
+							<li><a class="share" id="${'share '+i}" data-clipboard-text="${blogPosts[i].url}"><i class="fa fa-share"><input type="button" style="display : none; cursor : pointer;" id="copy" data-clipboard-target="#txt_copy" >
+							</i></a></li>
+						</ul>
+		</div>
+		`
+		document.getElementById('root').innerHTML += blogPostData;
+	}
+}
+
+getBlogData();
+
+
+
+
+
+
+{/* 
 fetch(url)
 .then( (res) => {return res.json()})
 .then((result) => {
@@ -37,4 +83,4 @@ fetch(url)
 		
     }
 })
-.catch(err => console.warn(err))
+.catch(err => console.warn(err)) */}

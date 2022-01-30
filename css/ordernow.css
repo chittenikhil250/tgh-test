@@ -52,7 +52,7 @@ li label{
 @media (max-width:440px) {
     li label{
         font-size: medium;
-        width: 100px;
+        width: 110px;
     }
     li input{
         width: 170px !important;
@@ -86,10 +86,6 @@ body{
 #ord{
     padding-top: 5vh;
 }
-
-
-
-
 .multi-selector{
     width: 160px;
     margin-bottom: 10px;
@@ -158,9 +154,19 @@ p{
         margin-top: 45vh;
     }
 }
-
-
-
-body{
-    box-sizing: border-box;
+#part-two{
+    display: none;
+}
+.mb-8{
+    margin-bottom: 8px !important;
+}
+@media(max-width:500px){
+    
+}
+.wrong-promo{
+    display: block;
+    width: fit-content;
+    margin-left: 10vw;
+    color: red;
+    display: none;
 }

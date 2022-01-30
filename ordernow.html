@@ -62,7 +62,8 @@
 					</li>
 					<li>
 						<label for="promocode">Promo Code (optional) : </label>
-						<input type="text" name="promocode" id="promocode">
+						<input type="text" name="promocode" id="promocode"> <br>
+						<label class="wrong-promo" id="wrong-promo" for=""> **Incorrect Promocode, Please try again. </label>
 					</li>
 					<center>
 						<div class="multi-selector">
@@ -263,22 +264,32 @@
 		<!-- End footer -->
 
 	</div>
-	<!-- End Container -->
-	<script type="text/javascript">
+	<script type="text/javascript"> 
 
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ_lxLr5m4c_xpOtxRBU8LS3a1tN-u8jsCk7Q42Pj8GKC-f0ZqPO9Ld4YtKizREQn_/exec'
-			  const form = document.forms['google-sheet']
-			  const dnon = document.getElementById('dnon')
-			  form.addEventListener('submit', e => {
-				e.preventDefault()
-				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				  .then(response => alert("Your order is placed succesfully."))
-				  .catch(error => console.error('Error!', error.message))
-				  form.style.display = 'none'
-				  dnon.style.display = 'block'
-				  window.scrollTo(0,0);
-			  })
-			  
+	function isInArray(value, array) {
+  	return array.indexOf(value) > -1;
+	}
+
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbxZ_lxLr5m4c_xpOtxRBU8LS3a1tN-u8jsCk7Q42Pj8GKC-f0ZqPO9Ld4YtKizREQn_/exec'; 
+	const form = document.forms['google-sheet']; 
+	const dnon = document.getElementById('dnon'); 
+	form.addEventListener('submit', e => {
+		e.preventDefault(); 
+		const promoCodes = ['SHAURYA', 'ANEETA', '', ' ', 'SURUCHI', 'BOAT', 'AISHU', 'KARTHIK', 'HARSHA', 'SONEY', 'PHANI', 'CVS', 'SURESH', 'NIKKI', 'ROHIT', 'ANUSHALA', 'YND', 'MICKEY', 'BHARATH', 'PAUL', 'RAHUL', 'DADDY', 'LOL', 'NIKHIL', 'MANO', 'AKHIL', 'RAM', 'SHASHA', 'PINKY', 'MANI', 'PATIL', 'USHWIN', 'VARSHA', 'BUNNY', 'RAVI', 'SNIGDHA', 'MEGA', 'OJ', 'ABROL', 'PALAK', 'RAJU']; 
+		var promo = document.getElementById('promocode').value;
+		if (isInArray(promo, promoCodes)){
+		 fetch(scriptURL, { method: 'POST', body: new FormData(form)}).then(response => 
+		 alert("Your order is placed succesfully.")).catch(error => 
+		 console.error('Error!', error.message)); 
+		 form.style.display = 'none'; 
+		 dnon.style.display = 'block'; 
+		 window.scrollTo(0,0);
+		}
+		else{
+			document.getElementById('wrong-promo').style.display = 'block'
+			setTimeout(function(){ document. getElementById("wrong-promo").style.display= 'none'; },3000);
+		} 
+		 }) 
 	</script>
 	<!-- JavaScript Bundle with Popper --> 
 	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

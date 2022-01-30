@@ -123,3 +123,7 @@ function minus3(){
         m.value --;
     }
 }
+function gonext(){
+    document.getElementById('part-one').style.display = 'none';
+    document.getElementById('part-two').style.display = 'block';
+}
