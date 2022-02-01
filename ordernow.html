@@ -45,7 +45,7 @@
 			
 			<center><h1 id="ord">Order Now</h1></center>
             <!-- form to get data and orders  -->
-            <form class="order-form container" method="post" name="google-sheet">
+            <form class="order-form container" action="ordernow.php" method="post" name="google-sheet">
 				<div class="row">
 				<div class="col-lg-6">
 				<ul>
@@ -54,7 +54,7 @@
 						<input required type="name" name="name" id="name"></li>
 					<li>
 						<label for="phone">Phone :</label>
-						<input required type="tel" name="phone" id="phone">
+						<input type="number" required type="tel" name="phone" id="phone">
 					</li>
 					<li> 
 						<label for="email">E-mail Id :</label>
